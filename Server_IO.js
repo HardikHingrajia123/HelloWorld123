@@ -5,7 +5,7 @@ var io = require('socket.io').listen(server);
 io.sockets.on('connection', function (socket) {
     console.log('A client is connected!'); 
     
-    socket.on('message', function (message) {
+    socket.on('Method changes', function (message) {
             console.log('Arrival data is : ' + message );
             socket.emit('message', 'Server send this data  ' + message );
     }); 
