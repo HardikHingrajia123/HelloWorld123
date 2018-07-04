@@ -9,7 +9,7 @@ io.sockets.on('connection', function (socket) {
             console.log('Arrival data is : ' + message );
             socket.emit('message', 'Server send this data  ' + message );
     }); 
-     socket.on('login', function (message) {
+     socket.on('LoginLogout', function (message) {
             console.log('Arrival data is : ' + message );
             socket.emit('message', 'Server send this data  ' + message );
     }); 
@@ -18,5 +18,5 @@ io.sockets.on('connection', function (socket) {
          console.log(' A client is disconnected ' + message);
     }, 100);
     });
-});
+}); 
 server.listen(3131); 
